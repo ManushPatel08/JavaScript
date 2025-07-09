@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="validateOTP.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "HvSqLEMrp9NfbscQ-",
+      });
+   })();
+</script>
+<body>
+
+    <div id="login">
+         <h1>LOGIN</h1>
+    <label for="">Email</label>
+    <input type="text" id="loginemail">
+    <br>
+    <label for="">Password</label>  
+    <input type="password" id="loginpassword">
+    <br>
+    <button onclick="validateUser()">Login</button>
+    <p id="email"></p>
+
+    </div>
+    <div id="otp" style="display: none;">
+        <label for="">OTP</label>
+        <input type="number" id="loginotp">
+        <button onclick="verifyOTP()">Verify OTP</button>
+    </div>
+    <h1 id="loginsuccess"></h1>
+   
+</body>
+</html>
